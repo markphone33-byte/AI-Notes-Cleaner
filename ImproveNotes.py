@@ -69,13 +69,15 @@ print(f"{GREEN}\nProcessing your notes, please wait...\n{REGULAR}")
 # Call the function to clean the notes
 result = clean_notes(user_input)
 
+#  Print the cleaned notes to the console
+print("\n--- CLEANED NOTES ---\n")
+print(f"{GREEN}{result}{REGULAR}")
+
+
 # # Optionally, save the cleaned notes to a text file with a timestamped filename
 # filename = f"cleaned_notes_{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.txt"
 # with open(f"/Users/marknguyen/Code Stuff/Text Files/{filename}", "w", encoding="utf-8") as f:
 #     f.write(result)
 
-# Print the cleaned notes to the console and sends an email version
-# So that Zapier turns the email into a Google Doc
-print("\n--- CLEANED NOTES ---\n")
-print(f"{GREEN}{result}{REGULAR}")
-send_email(result)
+# # Optionally sends an email version so that Zapier turns the email into a Google Doc
+# send_email(result)
